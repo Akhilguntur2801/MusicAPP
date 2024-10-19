@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Login, Home } from './components'
 
 const App = () => {
+    const [auth , setAuth ] = useState(false || window.localStorage.getItem("auth") === "true")
   return (
     <div className='w-screen h-screen bg-primary flex justify-center items-center'>
         <Routes>
